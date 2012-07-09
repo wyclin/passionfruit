@@ -1,2 +1,22 @@
-<h1>StaticPages#welcome</h1>
-<p>Find me in app/views/static_pages/welcome.html.erb</p>
+<div class="about_banner">
+	<%= image_tag "welcome_slider_demo.jpg", alt: "Slider Demo" %>
+</div>
+<div id="signup_buttons">
+	<table width="100%", align="center">
+		<tr>
+			<td>
+				<div class="signup_button" id="student">
+					I'd like to learn something.
+					<%= link_to "STUDENT SIGN UP", signup_path, class: "btn btn-large btn-primary" %>
+				</div>
+			</td>
+			<td>
+				<div class="signup_button" id="teacher">
+					I can teach you!
+					<%= link_to "TEACHER SIGN UP", signup_path, class: "btn btn-large btn-primary" %>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	

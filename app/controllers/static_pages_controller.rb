@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def signup
+  	@user_type
   end
 
   def about

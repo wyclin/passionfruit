@@ -1,12 +1,16 @@
 Inaika::Application.routes.draw do
-  get "static_pages/welcome"
 
-  get "static_pages/signup"
+  get 'students/new'
+  get "static_pages/welcome"
 
   get "static_pages/about"
 
   get "static_pages/contact"
 
+  match '/student_signup', to: 'students#new'
+  match '/teacher_signup', to: 'teachers#new'
+  match '/signup', to: 'static_pages#signup'
+  match '/welcome', to: 'static_pages#welcome'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
