@@ -1,10 +1,9 @@
 class Student < ActiveRecord::Base
-  attr_accessible :email, :first_name, :image, :last_name, :location, :password, :password_confirmation
-  has_secure_password
+  attr_accessible :email, :first_name, :image, :last_name, :location
 
   before_save { |student| student.email = email.downcase }
 
-  validates :first_name, :last_name, presence: => true
+  validates :first_name, :last_name, presence: true
   validates :password, presence: true, length: {minimum: 6}
   validates :password_confirmation, presence: true
 

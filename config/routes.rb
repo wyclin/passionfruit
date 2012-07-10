@@ -6,6 +6,7 @@ Inaika::Application.routes.draw do
   get "static_pages/about"
 
   get "static_pages/contact"
+  get "static_pages/search"
 
   match '/student_signup', to: 'students#new'
   match '/teacher_signup', to: 'teachers#new'

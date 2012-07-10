@@ -11,4 +11,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def search
+  	@search_entry
+  end
 end
