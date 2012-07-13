@@ -9,30 +9,31 @@
 <body>
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container"> 
         	<div id="logo">
-        		<%= link_to image_tag("inaika_logo.png", alt: "Inaika Logo"), '#' %>
+        		<%= link_to image_tag("inaika_logo_demo.png", alt: "Inaika Logo"), '/demo/welcome' %>
         	</div>
           <nav>
             <ul class="nav pull-right">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Sign in", '#' %></li>
+              <li><%= link_to "Sign Out", '/demo/end' %></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
     <div class="container">
-      <%= yield %>
+      <div class="content">
+        <%= yield %>
+      </div>
     </div>
 	<footer class="footer">
+    <div class="container">
 	  <nav>
-	    <ul>
-	      <li><%= link_to "About",   '#' %></li>
-	      <li><%= link_to "Contact", '#' %></li>
+	    <ul>	      
+        <li><%= link_to "Feedback", '/demo/feedback', class: "btn btn btn-danger"%></li>
 	    </ul>
 	  </nav>
+  </div>
 	</footer>
 </body>
 </html>

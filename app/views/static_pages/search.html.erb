@@ -1,11 +1,13 @@
 <div>
 	<%= form_tag do |f| %>
-	 <%= label_tag :teacher_type, "What do you want to learn?" %>
+	<div>
+		<p>What do you want to learn?</p>
+	</div>
  	 <%= text_field_tag :teacher_type %>
- 	  <%= label_tag :location, "Where do you live?" %>
+ 	 <p> Where do you live?</p>
  	 <%= text_field_tag :location %>
 	<div class="search_button" id="teacher">
-			<%= link_to "SEARCH", "#", class: "btn btn-large btn-primary" %>
+			<%= link_to "Find a teacher", "#", class: "btn btn-large btn-primary" %>
 	</div>
 	<% end %>
 </div>

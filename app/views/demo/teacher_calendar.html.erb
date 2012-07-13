@@ -1,0 +1,92 @@
+
+	<div class="navbar" id="profile_navbar">
+  		<div class="navbar-inner">
+    		<div class="container">
+     	 		<ul class="nav">
+  					<li class="active">
+    					<%= link_to "Find a Teacher", "search" %>
+  					</li>
+  					<li>
+  						<%= link_to "My Profile", "student_profile" %>
+  					</li>
+  					<li>
+  						<%= link_to "My Calendar", "student_calendar" %>
+  					</li>
+  					<li>
+  						<%= link_to "My Payment Info", "student_payment" %>  						
+  					</li>
+				</ul>
+    		</div>
+  		</div>
+	</div>
+
+  <div id="main_content">
+    <div id="top">
+      <div class="row">
+        <div class="span1">
+          <%= image_tag "wayne_profile_mini.jpg" %>         
+        </div>
+        <div class="span11">
+          <h1>John Smith's Calendar</h1>      
+        </div>
+      </div>
+    </div>
+
+    <div id="johns_calendar">
+      <div class="row" align="center">
+        <div class="span4">
+          <button class="btn btn-success">Private Class</button>
+        </div>
+        <div class="span4">
+          <button class="btn btn-warning">Shared Class</button>
+        </div>
+        <div class="span4">
+          <button class="btn btn-inverse">Not Available</button>
+        </div>
+      </div>
+      <div class="hero-unit">
+        <h1>John's calendar goes here.</h1>
+      </div>
+    </div>
+
+    <div id="booking_info">
+        <h3>You have selected a class with John Smith :</h3>
+        <p>Type: <button class="btn btn-warning">Shared Class</button>
+          <%= link_to "(How does this work?)", "shared_class_info" %></p>
+        <p>Current Class Size: <strong>3/10 people</strong></p>
+        <p>Minimum Required for class: <strong> 2 people</strong></p>  
+        <p>Current Cost: <strong>$120 per person</strong></p>
+        <p>- If 2 more people sign up, the cost will come down to: <strong>$90 per person</strong></p>
+        <p>- If 7 more people sign up, the cost will come down to: <strong>$50 per person</strong></p>
+        <p>Invite your friends! Share this link: <em>http://www.inaika.com/demo/johns_golf_class</em></p>
+        <h3>Class Details</h3>
+        <p>Date: June 29, 2012</p>
+        <p>Time: 9am - 11pm </p>
+        <p>Location: Farmington Driving Range. 2321 Towncrest Road, San Jose, CA 95035
+          <%= link_to "(Show on map)", "#" %></p>
+        </p>
+        <h3>Payment Info</h3>
+            <div class="control-group">
+            <label class="control-label">Select Payment Option:</label>
+            <div class="controls">
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="card1" checked>
+                VISA credit card ending in 9876
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="paypal">
+                Paypal
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="newcard">
+                Add new card
+              </label>
+            </div>
+          </div>
+          <h3>Cancellation Policy</h3>
+          <p><strong>Yes! You can cancel this class and receive a full refund</strong>, any time up to 48 hours before the class date. You can also reschedule the class for a different date. Thes cancellation policy is decided by your teacher, not Inaika.</p>
+    </div>    
+    <div id="booking_buttton">
+      <%= link_to "Book this class!", "confirmation", class: "btn btn-large btn-primary" %>        
+    </div>
+  </div>

@@ -1,0 +1,103 @@
+
+	<div class="navbar" id="profile_navbar">
+  		<div class="navbar-inner">
+    		<div class="container">
+     	 		<ul class="nav">
+  					<li class="active">
+    					<%= link_to "Find a Teacher", "search" %>
+  					</li>
+  					<li>
+  						<%= link_to "My Profile", "student_profile" %>
+  					</li>
+  					<li>
+  						<a href="#">My Calendar</a>
+  					</li>
+  					<li>
+  						<a href="#">My Payment Info</a>
+  					</li>
+				  </ul>
+    		</div>
+  		</div>
+    </div>
+
+<div>
+  <p>Showing results for the best <strong>golf</strong> teachers in <strong>Milpitas, CA</strong>:</p>
+  <div class="row">
+      <div class="span3">
+          <div class="control-group">
+            <label class="control-label" for="select01">Sort by:</label>
+            <div class="controls">
+              <select id="select01">
+                <option>Reviews</option>
+                <option>Distance</option>
+                <option>Price</option>
+              </select>
+            </div>
+          </div>
+      </div>
+  
+      <div class="span3">
+            <div class="control-group">
+            <label class="control-label" for="optionsCheckbox">Filter by:</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                  CPR Trained
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                  University graduate
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                  Licensed
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                  Mom Approved
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                  Has Car
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                  Etc etc etc.
+              </label>
+            </div>
+          </div>
+        </div>
+        </div>
+</div>
+
+<div class="row">   
+        <div class="span2">
+          <%= link_to (image_tag "john_profile.jpg"), "teacher_profile_john" %>
+          <h3>John Smith</h3>          
+        </div>
+        <div class="span8">
+          <p>Hi, my name is John. I'm a professional golf instructor with over 10 years of experience teaching beginners in the Bay Area. Want to learn golf? Choose me!</p>        
+          <button class="btn">punctual</button>
+          <button class="btn">enthusiastic</button>
+          <button class="btn">helpful</button>
+          <button class="btn">experienced</button>
+        </div>      
+        <div class="span2" id="reviews">
+          <h2>RECOMMENDED</h2>            
+            <%= image_tag "wayne_profile_mini.jpg" %>
+            <%= image_tag "mag_profile_mini.jpg" %>          
+            
+        </div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          <%= image_tag "sarah_profile.jpg" %>
+          <h3>Sarah Brown</h3 >          
+        </div>
+        <div class="span8">
+          <p>Hi, my name is Sarah. I don't actually like teaching golf. You should click John Smith's profile above instead.</p>
+        </div>
+                <div class="span2" id="reviews">
+          
+        </div>
+      </div>

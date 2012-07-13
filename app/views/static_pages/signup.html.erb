@@ -1,13 +1,28 @@
 
 <div>
+	<center>
+	<h1>Are you a student or a teacher?</h1>
 	<%= form_tag do %>
-		<table>
+		<table align="center" width="100%">
 			<tr><td>
-		<%= radio_button_tag(:user_type_student, "student") %> <%= label_tag(:user_type, "I am looking for a teacher.") %>
+		<%= radio_button_tag(:user_type_student, "student") %> 
+		<div><p>
+				I'm a <strong>student</strong>.<br />
+				<i>I am looking for a teacher.</i></p>
+		</div>
 	</td><td>
-		<%= radio_button_tag(:user_type_student, "teacher") %> <%= label_tag(:user_type, "I am a teacher.") %>
-	</td></tr></table>
+		<%= radio_button_tag(:user_type_student, "teacher") %>
+				<div><p>
+				I'm a <strong>teacher</strong>.<br />
+				<i>I am looking for people to teach.</i></p>
+		</div>
+		
+	</td>
+</tr>
+</table>
+</center>
 	<% end %>
-	<%= link_to "Sign up with Facebook! (DOES NOT WORK YET)", "#" %>
-	<%= link_to "Regular Signup for Demo Site. WILL NOT EXIST in REAL VERSION.", student_signup_path %>
-</#
+	<%= link_to image_tag("facebook_signup.png", alt: "Facebook Signup"), student_signup_demo_path %>
+	<h3>Why Facebook?</h3>
+</div>
+	

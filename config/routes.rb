@@ -1,6 +1,7 @@
 Inaika::Application.routes.draw do
 
   get 'students/new'
+  get 'students/new_demo'
   get "static_pages/welcome"
 
   get "static_pages/about"
@@ -12,6 +13,24 @@ Inaika::Application.routes.draw do
   match '/teacher_signup', to: 'teachers#new'
   match '/signup', to: 'static_pages#signup'
   match '/welcome', to: 'static_pages#welcome'
+
+  #DEMO
+  root :to => 'demo#welcome'
+  get 'demo/results'
+  get "demo/welcome"
+  get 'demo/student_profile'
+  get 'demo/search'
+  get 'demo/teacher_profile_john'
+  get 'demo/teacher_calendar'
+  get 'demo/oops'
+  get 'demo/end'
+  get 'demo/feedback'
+  get 'demo/shared_class_info'
+  get 'demo/confirmation'
+
+  match '/student_signup_demo', to: 'demo#student_signup'
+  match '/teacher_signup_demo', to: 'demo#teacher_signup'
+  match '/student_signup_demo', to: 'students#new_demo'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -61,7 +80,7 @@ Inaika::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  
 
   # See how all your routes lay out with "rake routes"
 

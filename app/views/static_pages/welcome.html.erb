@@ -1,22 +1,26 @@
 <div class="about_banner">
 	<%= image_tag "welcome_slider_demo.jpg", alt: "Slider Demo" %>
 </div>
-<div id="signup_buttons">
-	<table width="100%", align="center">
-		<tr>
+<div id="welcome_signup_buttons">
+	<table width="100%">
+		<tr align="center">
 			<td>
+				<div>
+					I'd like to <strong>learn</strong> something.
+				</div>
 				<div class="signup_button" id="student">
-					I'd like to learn something.
-					<%= link_to "STUDENT SIGN UP", signup_path, class: "btn btn-large btn-primary" %>
+					<%= link_to "STUDENT Sign Up", signup_path, class: "btn btn-large btn-primary" %>
 				</div>
 			</td>
 			<td>
-				<div class="signup_button" id="teacher">
-					I can teach you!
-					<%= link_to "TEACHER SIGN UP", signup_path, class: "btn btn-large btn-primary" %>
+				<div>
+					I can <strong>teach</strong> you something.
+				</div>
+				<div class="signup_button" id="teacher">					
+					<%= link_to "TEACHER Sign Up", signup_path, class: "btn btn-large btn-primary" %>
 				</div>
 			</td>
 		</tr>
-	</table>
+			</table>
 </div>
 	
