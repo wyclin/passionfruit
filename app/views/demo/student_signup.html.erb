@@ -1,8 +1,6 @@
-
-<div id="content">	
-	<div id="top">
-		<div class="span12">
-			<h1>You're looking for a teacher?</h1>
+<% provide(:page_name, 'student_signup') %>
+<div class="page-header">
+			<h1>So, you're looking for a teacher?</h1>
 
 		<!--
 		<div class="row">	
@@ -19,23 +17,26 @@
 		</div>
 	-->
 	</div>
+
 	<div id="facebook_signup">
 		<div class="row">
 			<div class="span12">
 				<%= link_to image_tag("facebook_signup.png", alt: "Facebook Signup"), "demo/student_profile" %>
+				<p>By clicking on the button above you agree to our <%= link_to "Terms of Service", "#" %> and <%= link_to "Privacy Policy", "#" %>.</p>
 			</div>
 		</div>
+		<br />
 		<div class="row" id="why_facebook">
 			<div class="span12">
-				<h2>Why do we use Facebook?</h2>				
+				<h3>Why do we use Facebook?</h3>				
 				<ul>
-					<li>Signing up with Facebook is quick and easy.</li>
-					<li>No need to create a whole new account just for Inaika.</li>					
+					<li>Login securely with one click.</li>
+					<li>Find awesome teachers through your friends.</li>					
+					<li>Share & recommend teachers easily</li>
 				</ul>
-				<h2>Is my information safe?</h2>
+				<h3>Is my information safe?</h3>
 				<p>Of course. Inaika will not sell any of your information to 3rd parties.</p>
 			</div>			
 		</div>
 	</div>
-</div>
 	

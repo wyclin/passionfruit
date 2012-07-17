@@ -1,33 +1,11 @@
-
-	<div class="navbar" id="profile_navbar">
-  		<div class="navbar-inner">
-    		<div class="container">
-     	 		<ul class="nav">
-  					<li class="active">
-    					<%= link_to "Find a Teacher", "search" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Profile", "student_profile" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Calendar", "student_calendar" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Payment Info", "student_payment" %>  						
-  					</li>
-				</ul>
-    		</div>
-  		</div>
-	</div>
-
-  <div id="main_content">
+  
     <div id="top">
       <div class="row">
-        <div class="span1">
-          <%= image_tag "wayne_profile_mini.jpg" %>         
+        <div class="span2">
+          <%= image_tag "john_profile.jpg" %>         
         </div>
-        <div class="span11">
-          <h1>John Smith's Calendar</h1>      
+        <div class="span10">
+          <h2>John Smith's Calendar</h2>
         </div>
       </div>
     </div>
@@ -41,12 +19,14 @@
           <button class="btn btn-warning">Shared Class</button>
         </div>
         <div class="span4">
-          <button class="btn btn-inverse">Not Available</button>
+          <button class="btn btn-danger">Booked</button>
         </div>
       </div>
-      <div class="hero-unit">
-        <h1>John's calendar goes here.</h1>
+      
+      <div class="row">
+        <%= render 'layouts/calendar' %>
       </div>
+
     </div>
 
     <div id="booking_info">

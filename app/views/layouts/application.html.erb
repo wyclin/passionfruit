@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+    <!-- header -->
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container"> 
@@ -14,26 +16,59 @@
         		<%= link_to image_tag("inaika_logo_demo.png", alt: "Inaika Logo"), '/demo/welcome' %>
         	</div>
           <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Sign Out", '/demo/end' %></li>
+            <ul class="nav pull-right">                         
+              <% if logged_in(yield(:page_name)) %>
+                  <li><%= link_to "Sign Out", '/demo/end' %></li>                
+              <% else %>
+                  <li><%= link_to image_tag("facebook_login.jpg"), "#" %></li>                              
+              <% end %>
             </ul>
           </nav>
         </div>
       </div>
     </header>
+
+    <!-- main body -->
     <div class="container">
       <div class="content">
+        <!-- inner navbar -->
+          <% if logged_in(yield(:page_name)) %>
+            <div class="navbar" id="profile_navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <ul class="nav">                    
+                    <li>
+                      <%= link_to "My Profile", "student_profile" %>
+                    </li>
+                    <li>
+                      <%= link_to "My Calendar", "student_calendar" %>
+                    </li>
+                    <li>
+                      <%= link_to "My Payment Info", "student_payment" %>             
+                    </li>
+                </ul>
+                </div>
+              </div>
+          </div>
+          <% end %>
+
         <%= yield %>
       </div>
     </div>
+
+    <!-- footer -->
 	<footer class="footer">
     <div class="container">
+      <div id="reserved_rights">
+        Inaika. All rights reserved.
+      </div>
 	  <nav>
-	    <ul>	      
-        <li><%= link_to "Feedback", '/demo/feedback', class: "btn btn btn-danger"%></li>
-	    </ul>
+      <ul>	       
+        <%= link_to "Feedback", '/demo/feedback', class: "btn btn btn-danger"%>	   
+      </ul>
 	  </nav>
   </div>
 	</footer>
+
 </body>
 </html>

@@ -7,4 +7,13 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
+
+	def logged_in (page_name)
+		if (page_name.eql?'welcome') or (page_name.eql? 'student_signup')
+			return false	
+		else
+			return true
+		end	
+	end
+
 end

@@ -1,70 +1,133 @@
-	<div class="navbar" id="profile_navbar">
-  		<div class="navbar-inner">
-    		<div class="container">
-     	 		<ul class="nav">
-  					<li>
-    					<%= link_to "Find a Teacher", "search" %>
-  					</li>
-  					<li class="active">
-  						<%= link_to "My Profile", "student_profile" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Calendar", "student_calendar" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Payment Info", "student_payment" %>  						
-  					</li>
-				</ul>
-    		</div>
-  		</div>
+<% provide(:page_name, 'student_profile') %>
+	
+	<!-- my profile and search -->	
+		<div class="row">			
+				<div class="span6 box box-me">						
+						<div class="row">							
+							<div class="span2 box-profile-img">							
+									<%= image_tag "wayne_profile.jpg", class:"profile-img" %>															    					
+							</div>
+							<div class="span4 box-profile-details">								
+										<h2>Wayne Linderbergenongernin</h2>
+										<p>Milpitas, CA</p>								
+										<h3>Interests</h3>
+										<p>Tennis, Golf, Knitting, Cooking, Basket Weaving</p>										
+							</div>						
+						</div>	
+						<div class="row">
+							<div class="span6 box-profile-details">
+								<p>Other profile information here.</p>
+								<p>Other profile information here.</p>
+								<p>Other profile information here.</p>
+								<p>Other profile information here.</p>
+							</div>
+						</div>				
+				</div>
+
+				<div class="span6 box box-search">						
+						<h2>Find a teacher!</h2>
+						<h3>What do you want to learn?</h3>
+						
+					  	<input type="text" class="input span6 search-query" placeholder="Spanish, golf, salsa, web design, singing, writing, cooking..." ><br />
+					  	
+					  	<h3>Where?</h3>
+					  	
+					  	<input type="text" class="input span6 search-query" value="Milpitas, CA">
+					  	<div>
+					  		<%= link_to "Search", "results", class:"btn btn-large btn-primary" %>				  				
+					  	</div>					
+				</div>
+
+		</div>
+
+	<br />
+
+	<!-- suggested teachers -->
+	<div class="suggested_teachers" >
+		<h2>Thinking about learning something new?</h2>
+		<p>Here are some of the teachers your friends thought were awesome:</p>		
+			<div class="box box-teacher">
+				<div class="row">				
+					<div class="span2 box-profile-img">
+						<%= link_to (image_tag "carlos_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<h3>Carlos</h3>
+						<p>Guitar</p>
+					</div>
+					<div class="span2 box-profile-img">
+						<%= link_to (image_tag "maryann_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<h3>Mary-Ann</h3>
+						<p>Cooking</p>
+					</div>
+					<div class="span2 box-profile-img">
+						<%= link_to (image_tag "adam_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<h3>Adam</h3>
+						<p>Personal Training</p>
+					</div>
+					<div class="span2 box-profile-img">
+						<%= link_to (image_tag "karen_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<h3>Karen</h3>
+						<p>German</p>
+					</div>				
+					<div class="span2 box-profile-img">					
+						<%= link_to (image_tag "paul_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<h3>Paul</h3>
+						<p>Biology</p>
+					</div>
+					<div class="span2 box-profile-img">					
+						<%= link_to (image_tag "monica_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<h3>Monica</h3>
+						<p>Swimming</p>
+					</div>
+				</div>		
+			</div>
 	</div>
 
-	<div id="your_profile">
-		<div class="row">
-			<div class="span2" id="profile_pic">
-				<%= image_tag "wayne_profile.jpg" %>         
-			</div>
-			<div class="span10" id="profile_info">
-				<h1>Wayne Lin</h1>
-				<h4>Milpitas, CA</h4>
-				<%= link_to "Update your location", "#" %>
-				<h3>Interests</h3>
-				<p>Tennis, Golf, Knitting, Ethiopian Cooking, Underwater Basket Weaving</p>
-			</div>
-		</div>
-	</div>			
-	
+	<br />
+	<!-- your teachers -->
 	<div id="your_teachers">
-		
 			<h2>Your Teachers</h2>
-			<div class="row">		
-				<div class="span2">
-					<%= link_to (image_tag "john_profile.jpg"), "teacher_profile_john" %>
-					<h3>John Smith</h3>
-					<p>Teaches: <strong>Golf</strong></p>
+			<p>These are the rockstars who inspire your passion in learning.
+				<div class="box box-teacher">
+					<div class="row">		
+						<div class="span2 box-profile-img">
+							<%= link_to (image_tag "john_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
+							<h3>John Smith</h3>
+							<p>Golf</p>
+						</div>
+						<div class="span7">
+							<h3>Positive</h3>
+							<p>John is an excellent teacher, particularly well suited for beginners. He is patient, encouraging and most importantly very knowledgeable about the difficulties that new students face when starting to learn golf. He's excellent at explaining and showing to students the different techniques.<p>
+							<p>The driving range he teaches at is a little further away from the city, but very well maintained and has great service. I strongly recommend John to any beginners trying to learn golf.
+							</p>
+							<%= link_to "Edit your review", "#" %>
+						</div>
+						<div class="span3">
+							<p>John's other recommendation info will go here.<p>
+						</div>
+					</div>
 				</div>
-				<div class="span10">
-					<p>John is an excellent teacher, particularly well suited for beginners. He is patient, encouraging and most importantly very knowledgeable about the difficulties that new students face when starting to learn golf. He's excellent at explaining and showing to students the different techniques.<p>
-					<p>The driving range he teaches at is a little further away from the city, but very well maintained and has great service. I strongly recommend John to any beginners trying to learn golf.
-					</p>
-					<%= link_to "Edit your review", "#", class: "btn btn-mini btn-primary" %>
+				<br />
+				<div class="box box-teacher">
+					<div class="row">
+						<div class="span2 box-profile-img">
+							<%= link_to (image_tag "laura_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
+							<h3>Laura Rodriguez</h3	>
+							<p>Spanish</p>
+						</div>
+						<div class="span7">
+							<h3>Not Yet Reviewed</h3>
+							<p>You haven't written a review for Laura yet. We strongly encourage you to write reviews for your teachers because:</p>
+							<ul>
+								<li>Reason A</li>
+								<li>Reason B</li>
+								<li>Reason C</li>
+							</ul>
+							<%= link_to "Write a review for Laura!", "#" %>
+						</div>
+						<div class="span3">
+							<p>Laura's recommendations will go here.<p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="span2">
-					<%= image_tag "laura_profile.jpg" %>
-					<h3>Laura Rodriguez</h3	>
-					<p>Teaches: <strong>Spanish</strong></p>
-				</div>
-				<div class="span10">
-					<p>We strongly encourage you to write reviews for your teachers because:</p>
-					<ul>
-						<li>Reason A</li>
-						<li>Reason B</li>
-						<li>Reason C</li>
-					</ul>
-					<%= link_to "Write a review for Laura!", "#", class: "btn btn-mini btn-danger" %>
-				</div>
-			</div>
 		</div>
 	</div>

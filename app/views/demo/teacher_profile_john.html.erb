@@ -1,97 +1,120 @@
 
-	<div class="navbar" id="profile_navbar">
-  		<div class="navbar-inner">
-    		<div class="container">
-     	 		<ul class="nav">
-  					<li class="active">
-    					<%= link_to "Find a Teacher", "search" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Profile", "student_profile" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Calendar", "student_calendar" %>
-  					</li>
-  					<li>
-  						<%= link_to "My Payment Info", "student_payment" %>  						
-  					</li>
-				</ul>
-    		</div>
-  		</div>
-	</div>
 
-	<div id="your_profile">
-		<div class="row">
-			<div class="span10">
-				<div class="row">
-					<div class="span2" id="profile_pic">
-						<%= image_tag "john_profile.jpg" %>         
-					</div>
-					<div class="span8" id="profile_info">					
-							<h1>John Smith</h1>
-							<h3>Golf Instructor</h3>
-							<h4>Palo Alto, CA</h4>
-							<p>Rates from <strong>$40</strong> per hour</p>
-							<%= link_to "Message Me", "#", class: "btn" %>				
-					</div>
-				</div>
-			</div>			
-			<div class="span2" id="review_info">								
-						<h3>20 Reviews</h3>
-						<h4>4 from your friends</h4>
-						<%= link_to "Book now!", "teacher_calendar", class: "btn btn-large btn-primary" %>
+	<div class="box box-teacher">
+		<div class="row">			
+			<div class="span2 box-profile-img">
+				<%= image_tag "john_profile.jpg", class:"img profile-img" %>         
+			</div>
+			<div class="span4 box-profile-details">					
+							<h2>John Smith - teaches Golf</h2>						
+							<h3>Palo Alto, CA</h3>
+							<p>Rates from <strong>$50</strong> per hour</p>
+							<%= link_to "Book John", "#", class:"btn btn-medium-standard btn-primary"%>
+							<%= link_to "Message John", "#", class:"btn btn-medium-standard btn-primary"%>
+
+			</div>		
+			<div class="span6 box-recommendations">								
+						<h3>Read John's 12 Reviews</h3>
+						<p>10 positive, 2 neutral, 0 negative</p>
+						<h4>3 recommendations from your friends</h4>
+						<%= link_to (image_tag "mag_profile_mini.jpg", class: "img profile-img"), "#" %>
+						<%= link_to (image_tag "wayne_profile_mini.jpg", class: "img profile-img"), "#" %>
+						<%= link_to (image_tag "michelle_profile_mini.jpg", class: "img profile-img"), "#" %>
 			</div>
 		</div>
+
 		<div class="row">
-			<div class="span10">
-				<div class="row">
-					<div class="span10">
-						<h3>About John</h3>
-						<p>Hi, my name is John. I'm a professional golf instructor with over 10 years of experience teaching beginners in the San Jose area. Want to learn golf? Choose me!</p>
-					</div>
-				</div>			
-				<div class="row">
-					<div class="span10">
-						<h3>Watch John's Video</h3>
-						<iframe width="560" height="315" src="http://www.youtube.com/embed/m0sVwPMntxE" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
+			<div class="span6">				
+					<div class="span6 box-profile-details">
+						<h3>Learn golf from John</h3>
+						<p>Hi, my name is John. I'm a professional golf instructor with over 10 years of experience teaching beginners in the San Jose area.</p>
+						<p>Levels: Beginner, Intermediate, Advanced</p>
+              			<p>>Background Check >Accepts Credit Cards</p>
+					</div>				
 			</div>
-			<div class="span2">
-				<h3>John's Availability</h3>
+			<div class="span6 box-profile-details">					
+						<h3>Watch John in Action</h3>
+						<iframe width="450" height="250" src="http://www.youtube.com/embed/K8qZV79NN6k" frameborder="0" allowfullscreen></iframe>					
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span4 box-profile-details">
+				<h3>View John's location on the Map</h3>
+					<%= image_tag "john_map.jpg" %>							
+			</div>
+			<div class="span2 box-profile-details">
+				<br />
+				
+				<h3>At yours (A):</h3><p>N/A</p>
+				<h3>At John's:</h3><p>N/A</p>
+				<h3>At fixed location (B):</h3><p>$50/hour</p>
+			</div>
+			
+			<div class="span6 box-profile-details">
+				<h3>Check John's Availability</h3>
 				<%= link_to (image_tag "calendar_mini.jpg"), "teacher_calendar" %>
+				<!-- <%= render 'layouts/calendar' %>-->
 			</div>
 		</div>
 	</div>			
 	
 	<div id="johns_students">
-		
-			<h2>John's Students</h2>
-			<div class="row">		
-				<div class="span2">
-					<h3>Wayne Lin</h3>
-					<%= link_to (image_tag "wayne_profile.jpg"), "#" %>	
-				</div>
-				<div class="span10">
-					<p>John is an excellent teacher, particularly well suited for beginners. He is patient, encouraging and most importantly very knowledgeable about the difficulties that new students face when starting to learn golf. The driving range he teaches at is a little further away from the city, but very well maintained and has great service. I strongly recommend John to any beginners trying to learn golf..</p>
-				</div>
-			</div>
-			<div class="row">		
-				<div class="span2">
-					<h3>Mag Shoe</h3>
-					<%= link_to (image_tag "mag_profile.jpg"), "#" %>					
-				</div>
-				<div class="span10">
-					<p>I really like John. He usually teaches beginners, but he's also extremely good at teaching more advanced students. He really helped me grasp some of the more technical techniques of golf and it has made me a much better player.</p>
+		<h2>John's Students</h2>
+			<div class="box box-student">
+				<div class="row">		
+					<div class="span2 box-profile-img">
+						<%= link_to (image_tag "wayne_profile.jpg", class: "img profile-img"), "student_profile" %>	
+						<h3>Wayne Lin</h3>
+					</div>
+					<div class="span10">
+						<h3>Positive</h3>
+						<p>John is an excellent teacher, particularly well suited for beginners. He is patient, encouraging and most importantly very knowledgeable about the difficulties that new students face when starting to learn golf. The driving range he teaches at is a little further away from the city, but very well maintained and has great service. I strongly recommend John to any beginners trying to learn golf..</p>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="span2">
-					<h3>Laura Rodriguez</h3>
-					<%= image_tag "laura_profile.jpg" %>										
+
+			<br />
+			
+			<div class="box box-student">
+				<div class="row">		
+					<div class="span2 box-profile-img">					
+						<%= link_to (image_tag "mag_profile.jpg", class: "img profile-img"), "#" %>					
+						<h3>Magdalena Szuszkiewicz</h3>
+					</div>
+					<div class="span10">
+						<h3>Positive</h3>
+						<p>I really like John. He usually teaches beginners, but he's also extremely good at teaching more advanced students. He really helped me grasp some of the more technical techniques of golf and it has made me a much better player.</p>
+					</div>
 				</div>
-				<div class="span10">
-					<P><em>Laura hasn't written a review for John yet. Laura's friends won't see John as a recommended teacher until she writes a review.</em></p>
+			</div>
+
+			<br />
+
+			<div class="box box-student">
+				<div class="row">
+					<div class="span2 box-profile-img">					
+						<%= image_tag "michelle_profile.jpg", class: "img profile-img" %>										
+						<h3>Michelle Hayashi</h3>
+					</div>
+					<div class="span10">
+						<h3>Positive</h3>
+						<P>This was my first time playing golf so I was little nervous. John not only helped me out in picking my equipment he really helped lay the foundations so that I can improve further by myself. He's extremely patient and encouraging and is great for beginners.</p>
+					</div>
+				</div>
+			</div>
+
+			<br />
+
+			<div class="box box-student">
+				<div class="row">
+					<div class="span2 box-profile-img">					
+						<%= image_tag "laura_profile.jpg", class: "img profile-img" %>										
+						<h3>Laura Rodriguez</h3>
+					</div>
+					<div class="span10">
+						<P><em>Laura hasn't written a review for John yet. Laura's friends won't see John as a recommended teacher until she writes a review.</em></p>
+					</div>
 				</div>
 			</div>
 		</div>		

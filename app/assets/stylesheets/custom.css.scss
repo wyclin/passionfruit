@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
 /* universal */
 
 html {
@@ -8,6 +14,8 @@ html {
 
 body {
   padding-top: 60px;
+  /* background-image:url('wayne_profile.jpg'); */
+  font-family: sans-serif;
 }
 
 section {
@@ -16,10 +24,6 @@ section {
 
 textarea {
   resize: vertical;
-}
-
-content {
-  padding-top: 50px;
 }
 
 .center {
@@ -37,29 +41,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 20px;
+  font-size: 3em;  
+  letter-spacing: -2px;  
 }
 
 h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;  
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h5 {
   font-size: 1.7em;
   letter-spacing: -1px;
   font-weight: normal;
   margin-top: 15px;
   margin-bottom: 15px;
   color: #999;
-  margin-left: 20px;
-}
-
-h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+  margin-top: 5px;
+  font-size: 1.0em;
+  line-height: 1.5em;
+}
+
+li {
+  font-size: 1.0em;
+  line-height: 1.5em;
+}
+
+label {
+  font-size: 1.0em;
 }
 
 /* header */
@@ -80,6 +100,92 @@ p {
   color: #fff;
   text-decoration: none;
 }
+
+
+/* profiles*/
+$blueLightest: #e0eefe;
+$blueLight: #bbd9fd;
+$blueMediumLight: #8ea5e6;
+$blueMedium: #4972d1;
+
+$greenLightest: #e0fee2;
+$greenLight: #94fe99;
+
+$redLightest: #fee0e0;
+$redLight: #fdbbbb;
+
+
+.profile-img{  
+  vertical-align: middle;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;  
+}
+
+.box{  
+  border-radius: 5px;  
+}
+
+
+.box-student {
+  background-color: $blueLightest;
+}
+
+.box-teacher {
+  background-color: $greenLightest;    
+}
+
+.box-me {
+  background-color: $blueLightest;
+  height: 280px;
+}
+
+.box-search {
+  background-color: $blueLightest;  
+  text-align: center;
+  height: 280px;  
+}
+
+.box-profile-img {
+  text-align: center;
+  padding: 5px;
+  @include box_sizing;
+}
+
+.box-profile-details {
+  padding: 5px;
+  @include box_sizing;
+}
+
+.box-recommendations {
+  padding: 5px;
+  border-left: solid 0px black;
+  @include box_sizing; 
+}
+
+.search-query { 
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+#profile-lower {
+  border-top: 1px solid black;
+}
+
+.btn-medium-standard {
+ width: 100px;
+}
+
+
+/*spans*/
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+ 
+}
+
+.span2 {
+  
+}
+
 
 /* footer */
 
@@ -105,15 +211,12 @@ footer {
       margin-left: 10px;
     }
   }
-}
+} 
 
 $grayMediumLight: #eaeaea;
 
-@mixin box_sizing {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
+
+  
 
 /* forms */
 
