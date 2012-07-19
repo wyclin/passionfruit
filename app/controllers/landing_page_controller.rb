@@ -2,11 +2,16 @@ class LandingPageController < ApplicationController
 
   def new
     @message = Message.new
+    render :layout => false 
   end
 
   def main
-  	render :layout => false 
   	@message = Message.new
+  	render :layout => false 
+  end
+
+  def thankyou
+  	render :layout => false 
   end
 
   def create
@@ -14,7 +19,7 @@ class LandingPageController < ApplicationController
     
     if @message.valid?
       Mailer.new_message(@message).deliver
-      redirect_to("/demo/welcome", :notice => "Message was successfully sent.")
+      redirect_to("/landing_page/thankyou", :notice => "Message was successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
       render :new

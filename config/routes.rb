@@ -14,8 +14,14 @@ Inaika::Application.routes.draw do
   match '/teacher_signup', to: 'teachers#new'
   match '/signup', to: 'static_pages#signup'
   match '/welcome', to: 'static_pages#welcome'
+
+
+  #LANDING PAGE
+  get "landing_page/thankyou"
   match 'landing_page' => 'landing_page#new', :as => 'landing_page', :via => :get
-  match 'landing_page' => 'landing_page#create', :as => 'landing_page', :via => :post 
+  match 'landing_page' => 'landing_page#create', :as => 'landing_page', :via => :post
+  match 'landing_page/main' => 'landing_page#main', :as => 'landing_page/main', :via => :get
+  match 'landing_page/main' => 'landing_page#create', :as => 'landing_page/main', :via => :post
   
   root :to => 'landing_page#main'
   #DEMO
