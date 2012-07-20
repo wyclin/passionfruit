@@ -61,9 +61,9 @@ module Inaika
 
     #Mail configuration
     config.action_mailer.smtp_settings = {
-      :address              => "mail.inaika.com",
+      :address              => "just98.justhost.com",
       :port                 => 465,
-      :domain               => "inaika.com",
+      :domain               => "justhost.com",
       :user_name            => "revolution+inaika.com",
       :password             => "Cze4et6gje$inre",
       :authentication       => :plain,
