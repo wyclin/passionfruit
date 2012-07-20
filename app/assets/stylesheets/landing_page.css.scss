@@ -7,6 +7,11 @@ html,body{
   width:100%;
 }
 
+p {
+ font: 'Palatino Linotype'; 
+}
+
+
 .landing-container {
   background: url('youth.jpg') no-repeat center center fixed;
   background-size: cover;  
@@ -48,29 +53,29 @@ html,body{
 }
 
 .landing-content h4 {
-  color: white;  
-  font-weight: normal;
+  color: white;    
   font: 'Palatino Linotype';
-  font-size: 1.4em; 
+  font-size: 1.2em; 
 }
 
 .landing-content a {
-  color: white;
+  color: lightblue;
 }
 
 .landing-content hr {
   border: 0 #ccc solid;
   border-top-width: 1px;
-  clear: both;  height: 0;
-  }
+  clear: both; height: 0;
+}
 
 .para {  
   font: 'Palatino Linotype';
+  margin-top: 10px;
+  margin-bot: 10px;
+  font-size: 1.2em;
 }
 
-#para {
- font: 'Palatino Linotype'; 
-}
+
 .landing-content input[type=text] {
   height: 25px;
 }
