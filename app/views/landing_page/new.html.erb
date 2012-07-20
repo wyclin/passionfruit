@@ -1,60 +1,4 @@
-<html>
-<head>
-<style type="text/css">
-@import "bootstrap";
-
-.container {
-  background: url(<%= asset_path 'youth.jpg' %>) no-repeat center center fixed;
-  background-size: cover; 
-  font-family: Helvetica;
-  color: white;
-  margin-top: 25px;
-  width: 100%;
-  height: 130%;
-  border: 0px solid white;  
-  text-align: center;
-}
-
-.signup-content {
-  position: relative;
-  top: 30px;
-  box-shadow: 0px 0px 10px #666;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 50px;
-  width: 600px;
-  background: url(<%= asset_path 'grey09.png' %>);
-  text-align: center;
-  border-radius: 20px;  
-}
-
-#logo {
-  max-width: 100%;  
-}
-
-h2 {
-  color: white;
-  font-weight: normal;
-  font: 'Helvetica Neue', Arial;
-  font-size: 18;
-}
-
-hr {
-  border: 0 #ccc solid;
-  border-top-width: 1px;
-  clear: both;  height: 0;
-}
-
-input {
-  size: 100%;
-}
-
-</style>
-
-</head>
-
-<body>
-<div class="container">
+<div class="landing-container">
   <div class="signup-content">
     <%= image_tag "logos/inaika_logo4.png", id: "logo" %>
     <h2>Passion. Energy.<br />Become who you want to be.</h2>
@@ -66,27 +10,29 @@ input {
       <p>The best submissions will be selected and put together by our professional producers in London & Warsaw in a short film about inspiring passionate people around the world. The film will be featured on the INAIKA website as well as promoted in media. Additionally, the 3 winners of the INAIKA - PASSION REVOLUTION competition will be invited to a professional shooting (at our studios in London or Warsaw) and will be featured as the main protagonists of the film.</p>
       <p>SUBMISSION DEADLINE:  5 July 2012, 11:59pm GMT<p>
 
+        <br />
+
       <%= form_for @message, :url => landing_page_path do |form| %>
         <fieldset class="fields">
           <div class="field">            
-            <%= form.text_field :name, size:70, value:"Your name", onfocus:"this.value=''"%>
+            <%= form.text_field :name, placeholder:"Your name"%>
           </div>        
 
           <div class="field">            
-            <%= form.text_field :email,  size:70, value:"Your email", onfocus:"this.value=''" %>
+            <%= form.text_field :email, placeholder:"Your email" %>
           </div>
 
           <div class="field">          
-            <%= form.text_field :subject, size:70,  value:"Your location (eg. London, UK)", onfocus:"this.value=''" %>
+            <%= form.text_field :subject, placeholder:"Your location (eg. London, UK)" %>
           </div>
           
           <div class="field">            
-            <%= form.text_field :body, size:70,  value:"Your video link", onfocus:"this.value=''" %>
+            <%= form.text_field :body , placeholder:"Your video link" %>
           </div>
         </fieldset>
         
         <fieldset class="actions">
-          <%= form.submit "Submit My Video!" %>
+          <%= form.submit "Submit My Video!", class:"btn btn-large"%>
         </fieldset>
       <% end %>
 
@@ -102,9 +48,5 @@ input {
     <hr />
     &copy; inaika.com
   </div>
+  <br class="clear" />
 </div>
-
-    
-
-</body>
-</html>

@@ -1,20 +1,5 @@
 Inaika::Application.routes.draw do
 
-  get 'students/new'
-  get 'students/new_demo'
-  get "static_pages/welcome"
-
-  get "static_pages/about"
-
-  get "static_pages/contact"
-  get "static_pages/search"
-  get "static_pages/test_contact"
-
-  match '/student_signup', to: 'students#new'
-  match '/teacher_signup', to: 'teachers#new'
-  match '/signup', to: 'static_pages#signup'
-  match '/welcome', to: 'static_pages#welcome'
-
 
   #LANDING PAGE
   get "landing_page/thankyou"
@@ -23,7 +8,8 @@ Inaika::Application.routes.draw do
   match 'landing_page/main' => 'landing_page#main', :as => 'landing_page/main', :via => :get
   match 'landing_page/main' => 'landing_page#create', :as => 'landing_page/main', :via => :post
   
-  root :to => 'landing_page#main'
+  root :to => 'landing_page#new'
+  
   #DEMO
   #root :to => 'demo#welcome'
   get 'demo/results'
