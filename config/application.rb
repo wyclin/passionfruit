@@ -65,8 +65,8 @@ module Inaika
       :port                 => 26,
       :domain               => "inaika.com",
       :user_name            => "revolution+inaika.com",
-      #:password             => "Cze4et6gje$inre",
-      #:authentication       => :plain,
+      :password             => "Cze4et6gje$inre",
+      :authentication       => :plain,
       #:enable_starttls_auto => true
     }
 
