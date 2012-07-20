@@ -61,11 +61,11 @@ module Inaika
 
     #Mail configuration
     config.action_mailer.smtp_settings = {
-      :address              => "mail.inaika.com",
-      :port                 => 26,
-      :domain               => "inaika.com",
-      :user_name            => "revolution+inaika.com",
-      :password             => "Cze4et6gje$inre",
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "gmail.com",
+      :user_name            => "waynelin.tw@gmail.com",
+      :password             => "Cze4et6gje$pfgm",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
