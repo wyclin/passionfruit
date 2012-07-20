@@ -67,7 +67,7 @@ module Inaika
       :user_name            => "revolution+inaika.com",
       :password             => "Cze4et6gje$inre",
       :authentication       => :plain,
-      #:enable_starttls_auto => true
+      :enable_starttls_auto => true
     }
 
     config.action_mailer.raise_delivery_errors = true
