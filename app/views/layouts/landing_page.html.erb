@@ -7,6 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=337043739706180";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
   <div class="landing-container">
     <div class="landing-content">
       <div class="landing-top">
@@ -19,20 +28,15 @@
         <%= yield %>
       </div>
 
-      <hr class="landing" />
-
-
-<!--
-      <div class="landing-social">
-        <h2>Social Media links here</h2>
-      </div>
-      
       <hr class="landing"/>
-    -->
+    
 
       <div class="landing-copyright">
-        <p>&copy; inaika.com 2012</p>
+ 
+        <p class="alignLeft"><%= mail_to "revolution@inaika.com", "Contact Us" %></p>        
+        <p class="alignRight">&copy; inaika.com 2012</p>
       </div>
+
     </div>
   </div>
 </body>

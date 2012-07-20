@@ -14,8 +14,7 @@ html,body{
   margin-top: 25px;  
   width: 100%; 
   height: 180%;  
-  text-align: center;
-  font-family: Verdana;
+  text-align: center;  
 }
 
 .landing-content {
@@ -29,6 +28,7 @@ html,body{
   background: url('grey09.png');
   text-align: center;
   border-radius: 20px;  
+  font-family: Verdana;
 }
 
 #landing-logo {
@@ -36,20 +36,19 @@ html,body{
 }
 
 .landing-content  h2{
-  color: white;  
-  font: 'Palatino Linotype';
+  color: white;    
   font-size: 1.8em;
 }
 
 .landing-content  h3{
   color: white;  
-  font: Comic Sans;
+  font-family: Verdana;
   font-size: 1.0em;
 }
 
 .landing-content h4 {
   color: white;    
-  font: 'Palatino Linotype';
+  
   font-size: 1.2em; 
 }
 
@@ -62,15 +61,6 @@ html,body{
   border-top-width: 1px;
   clear: both; height: 0;
 }
-
-
-.para {  
-  font: 'Palatino Linotype';
-  margin-top: 10px;
-  margin-bot: 10px;
-  font-size: 1.0em;
-}
-
 
 .landing-content input[type=text] {
   height: 25px;
@@ -89,7 +79,14 @@ html,body{
   font-weight: bold;
 }
 
-.field_with_errors {
-  padding: 0;
-  margin: 0;
+.landing-content p {
+  font-family: 'Verdana';
+}
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
 }
