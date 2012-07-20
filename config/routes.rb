@@ -7,6 +7,7 @@ Inaika::Application.routes.draw do
   get "landing_page/conditions"
   match 'landing_page' => 'landing_page#new', :as => 'landing_page', :via => :get
   match 'landing_page' => 'landing_page#create', :as => 'landing_page', :via => :post  
+  match 'thankyou' => 'landing_page#thankyou'
   match 'faq' => 'landing_page#faq'
   match 'conditions' => 'landing_page#conditions'
   

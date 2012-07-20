@@ -8,29 +8,13 @@
 
         <br />
 
-      <%= form_for @message, :url => landing_page_path do |form| %>
-        <fieldset class="fields">
-          <div class="field">            
-            <%= form.text_field :name, placeholder:"Your name"%>
-          </div>        
-
-          <div class="field">            
-            <%= form.text_field :email, placeholder:"Your email" %>
-          </div>
-
-          <div class="field">          
-            <%= form.text_field :subject, placeholder:"Your location (eg. London, UK)" %>
-          </div>
-          
-          <div class="field">            
-            <%= form.text_field :body , placeholder:"Your video link" %>
-          </div>
-          <div class="field">            
-        </fieldset>
-        
-        <fieldset class="actions">
+      <%= form_for @message, :url => landing_page_path do |form| %>        
+            <%= form.text_field :name, placeholder:"Your name"%><br />              
+            <%= form.text_field :email, placeholder:"Your email" %><br />      
+            <%= form.text_field :subject, placeholder:"Your location (eg. London, UK)" %><br />  
+            <%= form.text_field :body , placeholder:"Your video link" %><br />                  
+                
           <p>By clicking "Submit" you agree to our <%= link_to "Terms & Conditions", "conditions" %>.</p>
-          <%= form.submit "Submit My Video!", class:"btn btn-large"%>
-        </fieldset>
+          <%= form.submit "Submit My Video!", class:"btn btn-large"%>        
       <% end %>
 
