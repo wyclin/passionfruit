@@ -64,10 +64,13 @@ html,body{
   clear: both;  height: 0;
   }
 
-.landing-content p {
+.para {  
   font: 'Palatino Linotype';
 }
 
+#para {
+ font: 'Palatino Linotype'; 
+}
 .landing-content input[type=text] {
   height: 25px;
 }
