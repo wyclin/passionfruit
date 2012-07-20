@@ -62,7 +62,7 @@ module Inaika
     #Mail configuration
     config.action_mailer.smtp_settings = {
       :address              => "mail.inaika.com",
-      :port                 => 587,
+      :port                 => 465,
       :domain               => "inaika.com",
       :user_name            => "revolution+inaika.com",
       :password             => "Cze4et6gje$inre",
