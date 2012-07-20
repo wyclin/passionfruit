@@ -3,10 +3,12 @@ Inaika::Application.routes.draw do
 
   #LANDING PAGE
   get "landing_page/thankyou"
+  get "landing_page/faq"
+  get "landing_page/conditions"
   match 'landing_page' => 'landing_page#new', :as => 'landing_page', :via => :get
-  match 'landing_page' => 'landing_page#create', :as => 'landing_page', :via => :post
-  match 'landing_page/main' => 'landing_page#main', :as => 'landing_page/main', :via => :get
-  match 'landing_page/main' => 'landing_page#create', :as => 'landing_page/main', :via => :post
+  match 'landing_page' => 'landing_page#create', :as => 'landing_page', :via => :post  
+  match 'faq' => 'landing_page#faq'
+  match 'conditions' => 'landing_page#conditions'
   
   root :to => 'landing_page#new'
 

@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= full_title (yield(:title)) %></title>
+  <title>Inaika - Passion, Energy. </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="landing-container">
+    <div class="landing-content">
+      <div class="landing-top">
+        <%= image_tag "logos/inaika_logo5.png", id: "landing-logo" %>
+        <h2 class="landing">Passion. Energy.<br />Become who you want to be.</h2>
+        <hr />
+      </div>
+      
+      <div class="landing-main">
         <%= yield %>
+      </div>
+
+      <hr class="landing" />
+
+
+<!--
+      <div class="landing-social">
+        <h2>Social Media links here</h2>
+      </div>
+      
+      <hr class="landing"/>
+    -->
+
+      <div class="landing-copyright">
+        <p>&copy; inaika.com</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
