@@ -58,16 +58,16 @@ module Inaika
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-6
+
     #Mail configuration
     config.action_mailer.smtp_settings = {
-      :address              => "just98.justhost.com",
-      :port                 => 465,
+      :address              => "mail.inaika.com",
+      :port                 => 26,
       :domain               => "inaika.com",
       :user_name            => "revolution+inaika.com",
       :password             => "Cze4et6gje$inre",
-      :authentication       => :plain,
-      :enable_starttls_auto => true
+      #:authentication       => :plain,
+      #:enable_starttls_auto => true
     }
 
     config.action_mailer.raise_delivery_errors = true
