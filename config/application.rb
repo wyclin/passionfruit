@@ -60,12 +60,24 @@ module Inaika
     config.assets.version = '1.0'
 
     #Mail configuration
+=begin
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
       :user_name            => "waynelin.tw@gmail.com",
       :password             => "Cze4et6gje$pfgm",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+=end
+
+    config.action_mailer.smtp_settings = {
+      :address              => "mail.inaika.com",
+      :port                 => 465,
+      :domain               => "inaika.com",
+      :user_name            => "revolution+inaika.com",
+      :password             => "Cze4et6gje$iner",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
