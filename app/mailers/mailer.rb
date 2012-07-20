@@ -1,6 +1,6 @@
 class Mailer < ActionMailer::Base
 
-	default :from => "revolution@@inaika.com"
+	default :from => "waynelin.tw@gmail.com"
 	default :to => "revolution@inaika.com"
 
     def new_message(message)
