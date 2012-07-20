@@ -48,7 +48,7 @@ html,body{
   font-size: 1.0em;
 }
 
-.landing-container a {
+.landing-content a {
   color: white;
 }
 
@@ -56,4 +56,8 @@ html,body{
   border: 0 #ccc solid;
   border-top-width: 1px;
   clear: both;  height: 0;
+  }
+
+.landing-content input[type=text] {
+  height: 20px;
 }
