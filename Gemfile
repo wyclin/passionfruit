@@ -28,6 +28,7 @@ end
 
 gem 'omniauth-facebook'
 gem 'jquery-rails'
+gem 'dynamic_form'
 
 gem 'bcrypt-ruby', '3.0.1'
 # To use ActiveModel has_secure_password

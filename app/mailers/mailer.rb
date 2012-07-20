@@ -1,10 +1,10 @@
 class Mailer < ActionMailer::Base
 
-	default :from => "waynelin.tw@gmail.com"
+	default :from => "revolution@inaika.com"
 	default :to => "revolution@inaika.com"
 
     def new_message(message)
     	@message = message
-    	mail(:subject => "Video Sumbission from: #{message.name}, #{message.subject} ")
+    	mail(:subject => "Video Sumbission from: #{message.name}, #{message.location} ")
   end
 end

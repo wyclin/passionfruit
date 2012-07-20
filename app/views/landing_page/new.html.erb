@@ -1,4 +1,5 @@
 
+<br />
       <h2>THE PASSION REVOLUTION</h2><br />
       <div class="para">Are you crazy about something? Do you love sports, play an instrument to the despair of your neighbours, sing in a shower or fanatically learn foreign languages? Or maybe your passion is so rare that it would never even cross our mind?</div>
       <div class="para">
@@ -15,11 +16,12 @@
 
         <br />
 
-      <%= form_for @message, :url => landing_page_path do |form| %>        
+      <%= form_for @message, :url => landing_page_path do |form| %> 
+        <%= form.error_messages :header_message => "Submission Failed", :message => nil %>       
             <%= form.text_field :name, placeholder:"Your name"%><br />              
             <%= form.text_field :email, placeholder:"Your email" %><br />      
-            <%= form.text_field :subject, placeholder:"Your location (eg. London, UK)" %><br />  
-            <%= form.text_field :body , placeholder:"Your video link" %><br />                  
+            <%= form.text_field :location, placeholder:"Your location (eg. London, UK)" %><br />  
+            <%= form.text_field :video_link , placeholder:"Your video link" %><br />                  
                 
           <div class="para">By clicking "Submit" you agree to our <%= link_to "Terms & Conditions", "conditions" %>.</div>
           <br />

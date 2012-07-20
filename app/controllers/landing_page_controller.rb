@@ -22,7 +22,7 @@ class LandingPageController < ApplicationController
       redirect_to("/landing_page/thankyou", :notice => "Message was successfully sent.")
     else
       flash.now.alert = "Please fill all fields."
-      redirect_to("/landing_page")      
+      render :new    
     end
   end
 

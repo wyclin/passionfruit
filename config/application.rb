@@ -61,6 +61,7 @@ module Inaika
 
     #Mail configuration
 
+=begin
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
@@ -70,18 +71,19 @@ module Inaika
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
+=end
 
-=begin
     config.action_mailer.smtp_settings = {
-      :address              => "mail.inaika.com",
-      :port                 => 465,
-      :domain               => "inaika.com",
-      :user_name            => "revolution@inaika.com",
+      :address              => "just98.justhost.com",
+      :port                 => 26,
+      :domain               => "justhost.com",
+      :user_name            => "revolution+inaika.com",
       :password             => "Cze4et6gje$inre",
-      :authentication       => :plain,
+      :authentication       => :login,
       :enable_starttls_auto => true
     }
-=end
+
+
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.perform_deliveries = true
