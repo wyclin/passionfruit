@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'bootstrap-sass', '2.0.0'
+#gem 'bootstrap-sass', '2.0.0'
+gem 'twitter-bootstrap-rails', :github => 'seyhunak/twitter-bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -31,10 +32,11 @@ gem 'jquery-rails'
 gem 'dynamic_form'
 
 gem 'bcrypt-ruby', '3.0.1'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'	
 
-# To use Jbuilder templates for JSON
+# To use Jbuilder templates for JSON	
 # gem 'jbuilder'
 
 # Use unicorn as the app server
