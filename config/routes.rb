@@ -11,6 +11,7 @@ Inaika::Application.routes.draw do
   match 'thankyou' => 'landing_page#thankyou'
   match 'faq' => 'landing_page#faq'
   match 'conditions' => 'landing_page#conditions'
+  match 'contact' => 'landing_page#contact'
   
   root :to => 'landing_page#new'
 
