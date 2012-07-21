@@ -12,10 +12,10 @@
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=337043739706180";
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=337043739706180";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-  </script>
+  </script>  
   <div class="landing-container">
     <div class="landing-content">
       <div class="landing-top">
@@ -33,11 +33,11 @@
 
       <div class="landing-copyright">
  
-        <p class="alignLeft"><%= mail_to "revolution@inaika.com", "Contact Us" %></p>        
+        <p class="alignLeft"><%= link_to "Contact Us", "/landing_page/contact", id: "contact_link" %></p>        
         <p class="alignRight">&copy; inaika.com 2012</p>
       </div>
 
-    </div>
+    </div>s    
   </div>
 </body>
 </html>

@@ -1,28 +1,34 @@
 @import "bootstrap";
 
-html,body{
-  margin:0;
-  padding:0;
+html,body{  
+  padding: 0;
   height:100%;
-  width:100%; 
+  width:100%;   
+}
+
+body {
+  
 }
 
 .landing-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
   background: url('youth.jpg') no-repeat center center fixed;
-  background-size: cover;  
-  color: white;
-  margin-top: 25px;  
-  width: 100%; 
-  height: 180%;  
+  background-size: cover;
+  color: white;  
+  width: 100%;
+  min-height: 100%;
   text-align: center;  
 }
 
 .landing-content {
   position: relative;
   top: 30px;
+  margin-bottom: 100px;
   box-shadow: 0px 0px 10px #666;
   margin-left: auto;
   margin-right: auto;
+
   padding: 50px;
   width: 600px;
   background: url('grey09.png');
@@ -52,9 +58,15 @@ html,body{
   font-size: 1.2em; 
 }
 
+
+#contact_link {
+  color: white;
+}
+
 .landing-content a {
   color: lightblue;
 }
+  
 
 .landing-content hr {
   border: 0 #ccc solid;
@@ -89,4 +101,12 @@ html,body{
 
 .alignRight {
   float: right;
+}
+
+ul {
+  text-align: left;
+}
+
+#disclaimer {
+  text-align: justify;
 }
