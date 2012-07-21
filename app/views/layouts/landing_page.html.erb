@@ -14,11 +14,28 @@
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=337043739706180";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>  
+    }(document, 'script', 'facebook-jssdk'));        
+
+        function aud_play_pause() {
+        var myAudio = document.getElementById("player");
+          if (myAudio.paused) {
+            myAudio.play();
+          } else {
+            myAudio.pause();
+            }
+        }        
+  </script>
+
   <div class="landing-container">
     <div class="landing-content">
       <div class="landing-top">
+
+      <% if is_main_page(yield(:page_name)) %>
+      <div class="audio" style="float: right;">
+          <button onclick="aud_play_pause()" style="border: 0; background: transparent"><%= image_tag "speaker_white.png" %></button>               
+      </div> 
+      <% end %>
+
         <%= image_tag "logos/inaika_logo4.png", id: "landing-logo" %>
         <h4 class="landing">Passion. Energy.<br />Become who you want to be!</h4>
         <hr />
