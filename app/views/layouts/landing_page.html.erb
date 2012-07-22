@@ -8,7 +8,8 @@
 </head>
 <body>
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
+  <script>
+  (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -16,25 +17,50 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));        
 
-        function aud_play_pause() {
-        var myAudio = document.getElementById("player");
+
+var music_on = true;
+function changeMySrc() {
+    if (music_on) {
+   
+        music_on = false;
+    } else {
+        
+        music_on = true;        
+    }
+}
+
+  function aud_play_pause() {
+      var myAudio = document.getElementById("player");
           if (myAudio.paused) {
             myAudio.play();
+            document.getElementById("on-off").src="/assets/speaker_on.png";
+               
           } else {
             myAudio.pause();
-            }
-        }        
+            document.getElementById("on-off").src="/assets/speaker_off.png";  
+        }
+    }
+
   </script>
 
   <div class="landing-container">
     <div class="landing-content">
       <div class="landing-top">
 
-      <% if is_main_page(yield(:page_name)) %>
-      <div class="audio" style="float: right;">
-          <button onclick="aud_play_pause()" style="border: 0; background: transparent"><%= image_tag "speaker_white.png" %></button>               
-      </div> 
-      <% end %>
+      <!-- <div class="fb-like alignRight" data-href="http://www.facebook.com/inaikacom" data-send="true" data-layout="button_count" data-width="100" data-show-faces="false"></div>-->
+
+      
+      <div class="fb-like alignRight" data-href="http://www.facebook.com/inaikacom" data-send="false" data-width="250" data-show-faces="true" data-layout data-colorscheme="dark" data-font="tahoma"></div>          
+      <% if is_main_page(yield(:page_name)) %>        
+      <div class="audio alignLeft">
+          <button onclick="aud_play_pause()" style="border: 0; background: transparent"><%= image_tag "speaker_off.png", id:"on-off" %></button>               
+      </div>    
+      <% end %>      
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <%= link_to image_tag("logos/inaika_logo4.png", id: "landing-logo"), "/" %>
         <h4 class="landing">Passion. Energy.<br />Become who you want to be!</h4>
