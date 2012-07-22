@@ -33,11 +33,20 @@ body {
   background: url('grey09.png');
   text-align: center;
   border-radius: 20px;  
-  font-family: arial;
+  font-family: Verdana;
+}
+
+.landing-main {
+  text-align: center;
 }
 
 #landing-logo {
-  max-width: 100%;
+  max-width: 90%;
+}
+
+#landing-slogan {
+  max-width:100%;
+  max-height: 100%;
 }
 
 .landing-content  h2{
@@ -66,6 +75,13 @@ body {
   color: white;
   text-transform: none;    
   font-size: 1.7em;
+}
+
+.landing-content h7 {
+  color: white;      
+  font-size: 1.8em;
+  font-family: Verdana;
+  line-height: 1.9em;  
 }
 
 #contact_link {
@@ -103,6 +119,7 @@ body {
 
 .landing-content p {
   font-family: 'Verdana';
+  font-size: 1.0em;
 }
 
 .alignLeft {
