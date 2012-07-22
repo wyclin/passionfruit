@@ -10,19 +10,18 @@ body {
   
 }
 
-.landing-container {
-  margin-bottom: 25px;
+.landing-container {  
   background: url('youth.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;  
   width: 100%;
   min-height: 100%;
-  text-align: center;  
+  text-align: center; 
+  padding-top:30px;
+  padding-bottom: 20px;
 }
 
-.landing-content {
-  position: relative;
-  top: 30px;
+.landing-content {   
   margin-bottom: 100px;
   box-shadow: 0px 0px 10px #666;
   margin-left: auto;
@@ -38,7 +37,7 @@ body {
 }
 
 #landing-logo {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .landing-content  h2{
