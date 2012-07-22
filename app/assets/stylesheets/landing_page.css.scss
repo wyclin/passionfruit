@@ -11,7 +11,6 @@ body {
 }
 
 .landing-container {
-  margin-top: 25px;
   margin-bottom: 25px;
   background: url('youth.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -30,15 +29,16 @@ body {
   margin-right: auto;
 
   padding: 50px;
+  padding-top:30px;
   width: 600px;
   background: url('grey09.png');
   text-align: center;
   border-radius: 20px;  
-  font-family: Verdana;
+  font-family: arial;
 }
 
 #landing-logo {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .landing-content  h2{
@@ -53,11 +53,21 @@ body {
 }
 
 .landing-content h4 {
-  color: white;    
-  
+  color: white;      
   font-size: 1.2em; 
 }
 
+.landing-content  h5{
+  color: white;
+  font-weight: bold;
+  font-size: 3.0em;
+}
+
+.landing-content  h6{
+  color: white;
+  text-transform: none;    
+  font-size: 1.7em;
+}
 
 #contact_link {
   color: white;
