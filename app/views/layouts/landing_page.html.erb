@@ -46,23 +46,24 @@ function changeMySrc() {
   <div class="landing-container">
     <div class="landing-content">
       <div class="landing-top">
-
-      <!-- <div class="fb-like alignRight" data-href="http://www.facebook.com/inaikacom" data-send="true" data-layout="button_count" data-width="100" data-show-faces="false"></div>-->
-
-      
+ 
       <a href="www.facebook.com/inaika"><div class="fb-like alignLeft" data-href="http://www.facebook.com/inaikacom" data-send="false" data-width="400" data-show-faces="false" data-layout data-colorscheme="dark" data-font="tahoma"></div></a>
+
       <% if is_main_page(yield(:page_name)) %>        
       <div class="audio alignRight">
           <button onclick="aud_play_pause()" style="border: 0; background: transparent"><%= image_tag "speaker_off.png", id:"on-off" %></button>               
       </div>    
       <% end %>      
+
         <br />
         <br />
         <br />
         <%= link_to image_tag("logos/inaika_logo4.png", id: "landing-logo"), "/" %>
         <br />
-                    
+        
       </div>
+
+      <hr />
       
       <div class="landing-main">        
         <%= yield %>

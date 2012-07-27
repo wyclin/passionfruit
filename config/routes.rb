@@ -6,15 +6,16 @@ Inaika::Application.routes.draw do
   get "landing_page/faq"
   get "landing_page/conditions"
   get "landing_page/contact"
-  get "landing_page/contest"
-  match 'landing_page' => 'landing_page#new', :as => 'landing_page', :via => :get
-  match 'landing_page' => 'landing_page#create', :as => 'landing_page', :via => :post  
+  get "landing_page/main"
+  get "landing_page/new"
+  match 'landing_page/new' => 'landing_page#new', :as => 'landing_page', :via => :get
+  match 'landing_page/new' => 'landing_page#create', :as => 'landing_page', :via => :post  
   match 'thankyou' => 'landing_page#thankyou'
   match 'faq' => 'landing_page#faq'
   match 'conditions' => 'landing_page#conditions'
   match 'contact' => 'landing_page#contact'
   
-  root :to => 'landing_page#new'
+  root :to => 'landing_page#main'
 
   #DEMO
 =begin
