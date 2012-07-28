@@ -41,6 +41,15 @@ function changeMySrc() {
         }
     }
 
+var current_slide = 0;
+function next_slide() {
+           var current = document.getElementById("slide"+current_slide);
+           current_slide++;
+           var next = document.getElementById("slide"+current_slide);    
+           current.style.display = 'none';
+           next.style.display = 'inline';
+    }
+
   </script>
 
   <div class="landing-container">
