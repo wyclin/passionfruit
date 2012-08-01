@@ -16,12 +16,14 @@ Inaika::Application.routes.draw do
   match 'conditions' => 'landing_page#conditions'
   match 'contact' => 'landing_page#contact'
   match 'revolution' => 'landing_page#new'
+  match 'landing_page' => 'landing_page#main'
   
-  root :to => 'landing_page#main'
+  
 
-  #DEMO
-=begin
+  #DEMOs
+
   root :to => 'demo#welcome'
+
   get 'demo/results'
   get "demo/welcome"
   get 'demo/student_profile'
@@ -37,7 +39,6 @@ Inaika::Application.routes.draw do
   match '/student_signup_demo', to: 'demo#student_signup'
   match '/teacher_signup_demo', to: 'demo#teacher_signup'
   match '/student_signup_demo', to: 'students#new_demo'
-=end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
