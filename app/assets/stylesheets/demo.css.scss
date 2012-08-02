@@ -4,7 +4,7 @@
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 /* universal */
@@ -15,8 +15,9 @@ html {
 
 body {
   padding-top: 100px;
-  font-family: sans-serif; 
+  font-family: sans-serif;  
 }
+
 
 section {
   overflow: auto;
@@ -163,8 +164,7 @@ $redLight: #fdbbbb;
 }
 
 .box-recommendations {
-  padding: 5px;
-  border-left: solid 0px black;
+  padding: 12px;  
   @include box_sizing; 
 }
 
@@ -233,3 +233,67 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
+
+
+/* calendar*/
+
+ol.calendar {    
+  margin: 0 auto;
+  display:block;
+  min-height: 200px;
+  align: center;
+  background: url(images/tl.png) top left no-repeat;
+  padding: 12px 0 0 20px;
+}
+
+.calendar li    {
+  list-style:none;
+}
+
+/*
+ * Day styles
+ -------------------------*/
+.calendar li li   {
+  width: 150px;
+  height:11em;
+  float:left;
+  margin:.2em;
+  padding:.2em;
+  overflow:auto;
+  border: 2px black solid;
+}
+
+/*
+ * Day content (UL/OL & P)
+ -------------------------*/
+.calendar li li p  {
+  font-size:.7em;
+  display:block;
+}
+
+.calendar li li ol   {
+  width:auto;
+}
+
+li#days {
+  height: 2em;
+}
+
+li#days li{
+  height: 2em;
+  text-align: center;
+  border: 0px;
+}
+
+li#thismonth li {
+  background: lightblue;
+}
+
+li#lastmonth li, li#nextmonth li {
+  background: lightgrey;
+}
+
+
+.calendar button {
+  width:150px;
+}
