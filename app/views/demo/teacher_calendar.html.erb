@@ -2,7 +2,7 @@
     <div id="top">
       <div class="row">
         <div class="span2">
-          <%= image_tag "john_profile.jpg" %>         
+          <%= image_tag "profile/john_profile.jpg" %>         
         </div>
         <div class="span10">
           <h2>John Smith's Calendar</h2>
@@ -26,7 +26,6 @@
       <div class="row">
         <%= render 'layouts/calendar' %>
       </div>
-
     </div>
 
     <div id="booking_info">
@@ -45,28 +44,9 @@
         <p>Location: Farmington Driving Range. 2321 Towncrest Road, San Jose, CA 95035
           <%= link_to "(Show on map)", "#" %></p>
         </p>
-        <h3>Payment Info</h3>
-            <div class="control-group">
-            <label class="control-label">Select Payment Option:</label>
-            <div class="controls">
-              <label class="radio">
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="card1" checked>
-                VISA credit card ending in 9876
-              </label>
-              <label class="radio">
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="paypal">
-                Paypal
-              </label>
-              <label class="radio">
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="newcard">
-                Add new card
-              </label>
-            </div>
-          </div>
-          <h3>Cancellation Policy</h3>
-          <p><strong>Yes! You can cancel this class and receive a full refund</strong>, any time up to 48 hours before the class date. You can also reschedule the class for a different date. Thes cancellation policy is decided by your teacher, not Inaika.</p>
-    </div>    
+    </div>
+  
     <div id="booking_buttton">
-      <%= link_to "Book this class!", "confirmation", class: "btn btn-large btn-primary" %>        
+      <%= link_to "Proceed to Payment", "payment", class: "btn btn-large btn-primary" %>        
     </div>
   </div>

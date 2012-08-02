@@ -8,6 +8,18 @@
 </head>
 <body>
 
+    <!-- facebook content -->
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=337043739706180";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>  
+
     <!-- header -->
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -16,12 +28,14 @@
         		<%= link_to image_tag("logos/inaika_logo4_small.png", alt: "Inaika Logo"), '/demo/welcome' %>
         	</div>
           <nav>
-            <ul class="nav pull-right">                         
+            <ul class="nav pull-right">    
               <% if logged_in(yield(:page_name)) %>
                   <li><%= link_to "Sign Out", '/demo/end' %></li>                
               <% else %>
                   <li><%= link_to image_tag("facebook_login.jpg"), "#" %></li>                              
               <% end %>
+              <div class="fb-like" data-href="http://www.facebook.com/inaikacom" data-send="false" data-width data-show-faces="false" data-layout="button_count" data-colorscheme="light" data-font="tahoma"></div>                    
+              
             </ul>
           </nav>
         </div>
@@ -44,7 +58,7 @@
                       <%= link_to "My Calendar", "student_calendar" %>
                     </li>
                     <li>
-                      <%= link_to "My Payment Info", "student_payment" %>             
+                      <%= link_to "My Account", "student_account" %>             
                     </li>
                 </ul>
                 </div>
@@ -58,16 +72,13 @@
 
     <!-- footer -->
 	<footer class="footer">
-    <div class="container">
-      <div id="reserved_rights">
-        Inaika. All rights reserved.
-      </div>
-	  <nav>
-      <ul>	       
-        <%= link_to "Feedback", '/demo/feedback', class: "btn btn btn-danger"%>	   
-      </ul>
-	  </nav>
-  </div>
+      <div class="container">        
+    	  <nav >
+          <ul class="nav pull-right">	       
+            <%= link_to "Feedback", '/demo/feedback', class: "btn btn btn-danger"%>	   
+          </ul>
+    	  </nav>
+      </div>    
 	</footer>
 
 </body>

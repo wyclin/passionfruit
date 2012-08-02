@@ -5,7 +5,7 @@
 				<div class="span6 box box-me">						
 						<div class="row">							
 							<div class="span2 box-profile-img">							
-									<%= image_tag "wayne_profile.jpg", class:"profile-img" %>															    					
+									<%= image_tag "profile/wayne_profile.jpg", class:"profile-img" %>															    					
 							</div>
 							<div class="span4 box-profile-details">								
 										<h2>Wayne Lin</h2>
@@ -49,32 +49,32 @@
 			<div class="box box-teacher">
 				<div class="row">				
 					<div class="span2 box-profile-img">
-						<%= link_to (image_tag "carlos_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<%= link_to (image_tag "profile/carlos_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
 						<h3>Carlos</h3>
 						<p>Guitar</p>
 					</div>
 					<div class="span2 box-profile-img">
-						<%= link_to (image_tag "maryann_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<%= link_to (image_tag "profile/maryann_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
 						<h3>Mary-Ann</h3>
 						<p>Cooking</p>
 					</div>
 					<div class="span2 box-profile-img">
-						<%= link_to (image_tag "adam_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<%= link_to (image_tag "profile/adam_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
 						<h3>Adam</h3>
 						<p>Personal Training</p>
 					</div>
 					<div class="span2 box-profile-img">
-						<%= link_to (image_tag "karen_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<%= link_to (image_tag "profile/karen_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
 						<h3>Karen</h3>
 						<p>German</p>
 					</div>				
 					<div class="span2 box-profile-img">					
-						<%= link_to (image_tag "paul_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<%= link_to (image_tag "profile/paul_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
 						<h3>Paul</h3>
 						<p>Biology</p>
 					</div>
 					<div class="span2 box-profile-img">					
-						<%= link_to (image_tag "monica_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
+						<%= link_to (image_tag "profile/monica_profile.jpg", class: "img profile-img"), "teacher_profile_john" %>
 						<h3>Monica</h3>
 						<p>Swimming</p>
 					</div>
@@ -90,7 +90,7 @@
 				<div class="box box-teacher">
 					<div class="row">		
 						<div class="span2 box-profile-img">
-							<%= link_to (image_tag "john_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
+							<%= link_to (image_tag "profile/john_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
 							<h3>John Smith</h3>
 							<p>Golf</p>
 						</div>
@@ -99,7 +99,10 @@
 							<p>John is an excellent teacher, particularly well suited for beginners. He is patient, encouraging and most importantly very knowledgeable about the difficulties that new students face when starting to learn golf. He's excellent at explaining and showing to students the different techniques.<p>
 							<p>The driving range he teaches at is a little further away from the city, but very well maintained and has great service. I strongly recommend John to any beginners trying to learn golf.
 							</p>
-							<%= link_to "Edit your review", "#" %>
+							<button class="btn">punctual</button>
+              				<button class="btn">patient</button>
+              				<button class="btn">helpful</button><br />              				
+							<p><%= link_to "Edit your review", "new_review" %></p>
 						</div>
 						<div class="span3">
 							<p>John's other recommendation info will go here.<p>
@@ -110,7 +113,7 @@
 				<div class="box box-teacher">
 					<div class="row">
 						<div class="span2 box-profile-img">
-							<%= link_to (image_tag "laura_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
+							<%= link_to (image_tag "profile/laura_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
 							<h3>Laura Rodriguez</h3	>
 							<p>Spanish</p>
 						</div>
@@ -122,7 +125,7 @@
 								<li>Reason B</li>
 								<li>Reason C</li>
 							</ul>
-							<%= link_to "Write a review for Laura!", "#" %>
+							<%= link_to "Write a review for Laura!", "new_review" %>
 						</div>
 						<div class="span3">
 							<p>Laura's recommendations will go here.<p>

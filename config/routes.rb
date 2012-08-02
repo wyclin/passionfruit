@@ -1,7 +1,7 @@
 Inaika::Application.routes.draw do
 
 
-  #LANDING PAGE
+  #LANDING PAGE  
   get "landing_page/thankyou"
   get "landing_page/faq"
   get "landing_page/conditions"
@@ -21,9 +21,11 @@ Inaika::Application.routes.draw do
   
 
   #DEMOs
-
   root :to => 'demo#welcome'
 
+  get 'demo/student_account'
+  get 'demo/student_calendar'
+  get 'demo/payment'
   get 'demo/results'
   get "demo/welcome"
   get 'demo/student_profile'
