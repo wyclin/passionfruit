@@ -1,6 +1,7 @@
 <div class="box box-student">
+  <div class="box-inner">
 
-<h2>New Review for Laura Rodriguez</h2>
+      <h2>New Review for Laura Rodriguez</h2>
                       
             <%= link_to (image_tag "profile/laura_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
             <h3>Spanish Teacher</h3>            
@@ -26,8 +27,9 @@
             <h3>What are some words you would use to describe Laura as a teacher?</h3>
             <input type="text" placeholder:"For example: 'organised', 'friendly', 'professional', 'punctual' etc." />
 
-           	<h3>Write a little more about your learning experience with Laura here</h3>
+           	<h3>Write a little more about your learning experience with Laura here:</h3>
            	<textarea rows="10"></textarea>
-           	<%= link_to "Save Review", "student_profile", class: "btn btn-primary" %>
+           	<%= link_to "Save Review", "student_profile", class: "btn btn-large btn-primary" %>
+  </div>
 
 </div>

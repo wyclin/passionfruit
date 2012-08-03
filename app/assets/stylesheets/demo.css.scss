@@ -169,6 +169,11 @@ $redLight: #fdbbbb;
   @include box_sizing; 
 }
 
+.box-inner {
+  padding: 15px;
+  @include box_sizing;
+}
+
 .search-query { 
   margin-top:10px;
   margin-bottom:10px;
