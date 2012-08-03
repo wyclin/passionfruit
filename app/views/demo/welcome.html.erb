@@ -1,18 +1,27 @@
 <% provide(:page_name, 'welcome') %>
-		<div class="box box-student hero-unit">
-  			<h1 class="center" >Welcome to Inaika!</h1>
-  				<h5 class="center">- the online platform that lets you find the teachers your friends have tried and loved</h5>
-  				<br />
-  				<p>This is a simple demo we've created to showcase some of Inaika's functionality. We're currently developing a working prototype and hope to have it ready for you soon. If you have any suggestions for us at this time, just click on the red "Feedback" button. Otherwise, feel free to begin exploring Inaika!</p>  			
+		<div class="box box-student hero-unit" style="height: 350px">			
+				<center>
+					<div style="width:850px">
+					<br />
+					<br />	
+			
+	  			<h1>Welcome to Inaika!</h1>
+	  				<h5>the online platform that lets you find the teachers your friends have tried and loved</h5>
+	  				<br />
+	  				
+	  				<h2 style="text-align: justified">This is a simple demo we've created to showcase some of Inaika's functionality. We're currently developing a working prototype and hope to have it ready for you soon. If you have any suggestions for us at this time, just click on the red "Feedback" button. Otherwise, feel free to begin exploring Inaika!</h2> 
+	  				</div>
+	  			</center>
+  			
 		</div>
 
 		<div class="box" align="center">
-			<div class="row">		
+			<div class="row">									
 				<div class="span6">					
-					<%= link_to "Student Sign Up", student_signup_demo_path, class: "btn btn-large btn-primary" %>				
-				</div>
+					<h2>Students find great teachers</h2><%= link_to "Student Sign Up", student_signup_demo_path, class: "btn btn-large btn-primary" %>				
+				</div>		
 				<div class="span6">
-					<%= link_to "Teacher Sign Up", "#", class: "btn btn-large btn-primary" %>
+					<h2>Teachers find great students</h2><%= link_to "Teacher Sign Up", "#", class: "btn btn-large btn-primary" %>
 				</div>
 			</div>
 		</div>

@@ -1,1 +1,33 @@
-<h1>New Review for Laura Rodriguez</h1>
+<div class="box box-student">
+
+<h2>New Review for Laura Rodriguez</h2>
+                      
+            <%= link_to (image_tag "profile/laura_profile.jpg", class: "img profile-img profile-img-teacher"), "teacher_profile_john" %>
+            <h3>Spanish Teacher</h3>            
+
+            <br />
+            <h3>How was your experience with Laura?</h3>
+            <div class="controls">
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="positive" checked>
+                <%= image_tag "icon_positive.png" %>  <strong>Positive</strong> - I would recommend Laura to my friends.
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="neutral">
+                <%= image_tag "icon_neutral.png" %> <strong>Neutral</strong>
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="negative">
+                <%= image_tag "icon_negative.png" %>  <strong>Negative</strong> - I would not recommend Laura to any friends.
+              </label>
+            </div>
+
+            <br />
+            <h3>What are some words you would use to describe Laura as a teacher?</h3>
+            <input type="text" placeholder:"For example: 'organised', 'friendly', 'professional', 'punctual' etc." />
+
+           	<h3>Write a little more about your learning experience with Laura here</h3>
+           	<textarea rows="10"></textarea>
+           	<%= link_to "Save Review", "student_profile", class: "btn btn-primary" %>
+
+</div>

@@ -15,40 +15,40 @@
 			</div>		
 			<div class="span6 box-recommendations">								
 						<h3>Read John's 12 Reviews</h3>
-						<p>10 positive, 2 neutral, 0 negative</p>
+						<p><%= image_tag "icon_positive.png" %> 10 positive <%= image_tag "icon_neutral.png" %> 2 neutral <%= image_tag "icon_negative.png" %> 0 negative</p>
 						<h4>3 recommendations from your friends</h4>
-						<%= link_to (image_tag "profile/mag_profile_mini.jpg", class: "img profile-img"), "#" %>
-						<%= link_to (image_tag "profile/wayne_profile_mini.jpg", class: "img profile-img"), "#" %>
-						<%= link_to (image_tag "profile/michelle_profile_mini.jpg", class: "img profile-img"), "#" %>
+						<%= link_to (image_tag "profile/mag_profile_mini.jpg", class: "img profile-img"), "#johns_students" %>
+						<%= link_to (image_tag "profile/wayne_profile_mini.jpg", class: "img profile-img"), "#johns_students" %>
+						<%= link_to (image_tag "profile/michelle_profile_mini.jpg", class: "img profile-img"), "#johns_students" %>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="span6">				
-					<div class="span6 box-profile-details">
+			<div class="span6 box-profile-details">									
 						<h3>Learn golf from John</h3>
-						<p>Hi, my name is John. I'm a professional golf instructor with over 10 years of experience teaching beginners in the San Jose area.</p>
-						<p>Levels: Beginner, Intermediate, Advanced</p>
-              			<p><%= image_tag "icon_bgcheck.png" %>  Background Check <%= image_tag "icon_credit.png" %> Accepts Credit Cards</p>
-					</div>				
+						<p>Hi, my name is John. I'm a professional golf instructor with over 10 years of experience teaching in the San Jose area. Whether you're the learning golf for the first time or you're a seasoned golfer just looking for some technical pointers for improvement, I'll be happy to help you out.</p>
+						<p>My lessons are based on the Poodle method whereby classes are divided into Part A, B an C. In Part A you will learn about technique X from me, part B will be guided training from me and Part C will be individual practice.</p>
+						<p>I offer both private and shared classes. Shared classes are only offered on Saturdays.</p>
+						<p>If you're looking for a place to buy equipment, I strongly recommend Abe's Golfing Supplies on 567 Main Street in San Jose.</p>
+						<hr/>
+						<p><b>Levels:</b> Beginner, Intermediate, Advanced</p>
+              			<p><%= image_tag "icon_bgcheck.png" %> <b>Background Check  </b><%= image_tag "icon_credit.png" %> <b>Accepts Credit Cards</b></p>					
 			</div>
 			<div class="span6 box-profile-details">					
 						<h3>Watch John in Action</h3>
-						<iframe width="450" height="250" src="http://www.youtube.com/embed/K8qZV79NN6k" frameborder="0" allowfullscreen></iframe>					
+						<iframe width="500" height="250" src="http://www.youtube.com/embed/K8qZV79NN6k" frameborder="0" allowfullscreen></iframe>					
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="span4 box-profile-details">
-				<h3>View John's location on the Map</h3>
-					<%= image_tag "john_map.jpg" %>							
-			</div>
-			<div class="span2 box-profile-details">
-				<br />
+			<div class="span6 box-profile-details">
+
+				<h3>View the Map</h3>
+					<p><b>At Yours:</b>  N/A   <b>At John's:</b> N/A   <b>At fixed location (B):</b> $50/hour</p>					
+					<%= image_tag "john_map.jpg" %>
+					<br/>
+
 				
-				<h3>At yours (A):</h3><p>N/A</p>
-				<h3>At John's:</h3><p>N/A</p>
-				<h3>At fixed location (B):</h3><p>$50/hour</p>
 			</div>
 			
 			<div class="span6 box-profile-details">
@@ -60,6 +60,7 @@
 	
 	<div id="johns_students">
 		<h2>John's Students</h2>
+
 			<div class="box box-student">
 				<div class="row">		
 					<div class="span2 box-profile-img">
@@ -67,7 +68,7 @@
 						<h3>Wayne Lin</h3>
 					</div>
 					<div class="span10 box-profile-details">
-						<h3>Positive</h3>
+						<h3><%= image_tag "icon_positive.png" %> Positive</h3>
 						<p>John is an excellent teacher, particularly well suited for beginners. He is patient, encouraging and most importantly very knowledgeable about the difficulties that new students face when starting to learn golf. The driving range he teaches at is a little further away from the city, but very well maintained and has great service. I strongly recommend John to any beginners trying to learn golf..</p>
 						<button class="btn">punctual</button>
               			<button class="btn">knowledgeable</button>
@@ -81,11 +82,11 @@
 			<div class="box box-student">
 				<div class="row">		
 					<div class="span2 box-profile-img">					
-						<%= link_to (image_tag "profile/mag_profile.jpg", class: "img profile-img"), "student_profile" %>					
+						<%=  image_tag "profile/mag_profile.jpg", class: "img profile-img" %>					
 						<h3>Magdalena Szuszkiewicz</h3>
 					</div>
 					<div class="span10 box-profile-details">
-						<h3>Positive</h3>
+						<h3><%= image_tag "icon_positive.png" %> Positive</h3>
 						<p>I really like John. He usually teaches beginners, but he's also extremely good at teaching more advanced students. He really helped me grasp some of the more technical techniques of golf and it has made me a much better player.</p>
 						  <button class="btn">passionate</button>
 			              <button class="btn">energetic</button>
@@ -103,7 +104,7 @@
 						<h3>Michelle Hayashi</h3>
 					</div>
 					<div class="span10 box-profile-details">
-						<h3>Positive</h3>
+						<h3><%= image_tag "icon_positive.png" %> Positive</h3>
 						<P>This was my first time playing golf so I was little nervous. John not only helped me out in picking my equipment he really helped lay the foundations so that I can improve further by myself. He's extremely patient and encouraging and is great for beginners.</p>
 						<button class="btn">punctual</button>
               			<button class="btn">enthusiastic</button>
@@ -118,7 +119,7 @@
 				<div class="row">
 					<div class="span2 box-profile-img">					
 						<%= image_tag "profile/steven_profile.jpg", class: "img profile-img" %>										
-						<h3>Steven</h3>
+						<h3>Steven Johnson</h3>
 					</div>
 					<div class="span10 box-profile-details">
 						<P><em>Steven hasn't written a review for John yet. Steven's friends won't see John as a recommended teacher until Steven writes a review.</em></p>

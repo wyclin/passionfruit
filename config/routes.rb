@@ -36,6 +36,7 @@ Inaika::Application.routes.draw do
   get 'demo/end'  
   get 'demo/shared_class_info'
   get 'demo/confirmation'
+  get 'demo/new_review'
 
   match 'demo' => 'demo#welcome'
   match 'demo/feedback' => 'demo#new'

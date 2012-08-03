@@ -120,20 +120,21 @@ $redLight: #fdbbbb;
 
 .profile-img{  
   vertical-align: middle;
-  border-radius: 5px;
+  border-radius: 5px;  
+  margin-top:10px;
   padding: 5px;
   background-color: white;  
 }
 
 .box{  
-  border-radius: 5px;  
+  border-radius: 10px;
 }
 
 .box-signup {
   border: 2px grey solid;
 }
 
-.box-student {
+.box-student {  
   background-color: $blueLightest;
 }
 
@@ -154,12 +155,12 @@ $redLight: #fdbbbb;
 
 .box-profile-img {
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   @include box_sizing;
 }
 
 .box-profile-details {
-  padding: 5px;
+  padding: 15px;
   @include box_sizing;
 }
 
@@ -295,5 +296,5 @@ li#lastmonth li, li#nextmonth li {
 
 
 .calendar button {
-  width:150px;
+  width:140px;
 }
