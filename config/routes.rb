@@ -33,14 +33,19 @@ Inaika::Application.routes.draw do
   get 'demo/teacher_profile_john'
   get 'demo/teacher_calendar'
   get 'demo/oops'
-  get 'demo/end'
-  get 'demo/feedback'
+  get 'demo/end'  
   get 'demo/shared_class_info'
   get 'demo/confirmation'
 
+  match 'demo' => 'demo#welcome'
+  match 'demo/feedback' => 'demo#new'
+  match 'demo/new' => 'demo#new', :as => 'demo', :via => :get
+  match 'demo/new' => 'demo#create', :as => 'demo', :via => :post  
+  match 'demo/feedback_thankyou' => 'demo#feedback_thankyou'
   match '/student_signup_demo', to: 'demo#student_signup'
   match '/teacher_signup_demo', to: 'demo#teacher_signup'
   match '/student_signup_demo', to: 'students#new_demo'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

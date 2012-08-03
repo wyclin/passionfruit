@@ -1,33 +1,33 @@
-  
-    <div id="top">
+
+    <div class="box box-teacher">
+
       <div class="row">
-        <div class="span2">
-          <%= image_tag "profile/wayne_profile.jpg" %> 
+        <div class="span2 box-profile-img">
+          <%= image_tag "profile/wayne_profile.jpg", class:"img profile-img" %>         
         </div>
         <div class="span10">
-          <h2>Your Calendar</h2>
+          <h2>Your Calendar</h2>                  
+          <button class="btn btn-success" style="width:150px">Private Class</button><br />
+          <button class="btn btn-warning" style="width:150px">Shared Class</button><br />
+          <button class="btn btn-danger" style="width:150px">Booked</button><br />
         </div>
       </div>
-    </div>
+
+    <br />
+    <hr />
 
     <div id="johns_calendar">
       <div class="row" align="center">
-        <div class="span4">
-          <button class="btn btn-success">Private Class</button>
-        </div>
-        <div class="span4">
-          <button class="btn btn-warning">Shared Class</button>
-        </div>
-        <div class="span4">
-          <button class="btn btn-danger">Booked</button>
-        </div>
+
       </div>
       
       <div class="row">
-        <%= render 'layouts/calendar' %>
+        <%= render 'layouts/calendar_student' %>
       </div>
     </div>
+  </div>
 
+    <br />
     <div id="booking_info">
         <h3>You have selected a class with John Smith :</h3>
         <p>Type: <button class="btn btn-warning">Shared Class</button>
@@ -39,7 +39,7 @@
         <p>- If 7 more people sign up, the cost will come down to: <strong>$50 per person</strong></p>
         <p>Invite your friends! Share this link: <em>http://www.inaika.com/demo/johns_golf_class</em></p>
         <h3>Class Details</h3>
-        <p>Date: June 29, 2012</p>
+        <p>Date: July 4, 2012</p>
         <p>Time: 9am - 11pm </p>
         <p>Location: Farmington Driving Range. 2321 Towncrest Road, San Jose, CA 95035
           <%= link_to "(Show on map)", "#" %></p>
@@ -47,6 +47,6 @@
     </div>
   
     <div id="booking_buttton">
-      <%= link_to "Proceed to Payment", "payment", class: "btn btn-large btn-primary" %>        
+      <%= link_to "Cancel Class", "#", class: "btn btn-large btn-primary", style: "width: 200px" %>        
     </div>
-  </div>
+  

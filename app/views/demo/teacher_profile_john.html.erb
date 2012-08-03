@@ -29,7 +29,7 @@
 						<h3>Learn golf from John</h3>
 						<p>Hi, my name is John. I'm a professional golf instructor with over 10 years of experience teaching beginners in the San Jose area.</p>
 						<p>Levels: Beginner, Intermediate, Advanced</p>
-              			<p>>Background Check >Accepts Credit Cards</p>
+              			<p><%= image_tag "icon_bgcheck.png" %>  Background Check <%= image_tag "icon_credit.png" %> Accepts Credit Cards</p>
 					</div>				
 			</div>
 			<div class="span6 box-profile-details">					
@@ -53,8 +53,7 @@
 			
 			<div class="span6 box-profile-details">
 				<h3>Check John's Availability</h3>
-				<%= link_to (image_tag "calendar_mini.jpg"), "teacher_calendar" %>
-				<!-- <%= render 'layouts/calendar' %>-->
+				<%= link_to (image_tag "calendar_mini.jpg"), "teacher_calendar" %>				
 			</div>
 		</div>
 	</div>			
@@ -82,7 +81,7 @@
 			<div class="box box-student">
 				<div class="row">		
 					<div class="span2 box-profile-img">					
-						<%= link_to (image_tag "profile/mag_profile.jpg", class: "img profile-img"), "#" %>					
+						<%= link_to (image_tag "profile/mag_profile.jpg", class: "img profile-img"), "student_profile" %>					
 						<h3>Magdalena Szuszkiewicz</h3>
 					</div>
 					<div class="span10 box-profile-details">
@@ -118,11 +117,11 @@
 			<div class="box box-student">
 				<div class="row">
 					<div class="span2 box-profile-img">					
-						<%= image_tag "profile/laura_profile.jpg", class: "img profile-img" %>										
-						<h3>Laura Rodriguez</h3>
+						<%= image_tag "profile/steven_profile.jpg", class: "img profile-img" %>										
+						<h3>Steven</h3>
 					</div>
 					<div class="span10 box-profile-details">
-						<P><em>Laura hasn't written a review for John yet. Laura's friends won't see John as a recommended teacher until she writes a review.</em></p>
+						<P><em>Steven hasn't written a review for John yet. Steven's friends won't see John as a recommended teacher until Steven writes a review.</em></p>
 					</div>
 				</div>
 			</div>

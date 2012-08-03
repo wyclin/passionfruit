@@ -1,27 +1,26 @@
-<div align="center">
+<div></div>>
 	<h1>Congratulations, you've booked your class!</h1>
 	<h3>Golf Class with instructor John Smith</h3>
-	<table>
-		<tr>
-			<td>Date:</td>
-			<td>Jun 29, 2012</td>
-		</tr>
-		<tr>
-			<td>Time:</td>
-			<td>9am - 12pm</td>
-		</tr>
-		<tr>
-			<td>Location:</td>
-			<td>Farmington Driving Range<br />2321 Towncrest Road<br />San Jose, CA 95035</br><%= link_to "(Show on map)", "#" %></td>
-		</tr>		
-		<tr>
-			<td>Total Cost:</td>
-			<td>$120<br />
-				<em>(Note: This is a shared class. If more students join, the price will go down, and we will charge you for the lower price.)</em></td>
-		</tr>
-	</table>  
+	<h3>
+		Date
+	</h3>
+	<p>July 4, 2012</p>
+	<h3>Time</h3>
+	<p>9am - 12pm</p>
+	<h3>Location</h3>
+	<p>Farmington Driving Range<br />
+		2321 Towncrest Road<br />
+		San Jose, CA 95035</br>
+	</p>
+	<h3>Total Cost</h3>
+	<p>$120<br />
+		<em>(Note: This is a shared class. If more students join, the price will go down. You will be charged the lowest price.)</em>
+	</p>
+	<br />
 	<p>
-		This class has been saved to <%=link_to "your calendar", "student_calendar" %>.
+			This class has been saved to <%=link_to "your calendar", "student_calendar" %>.
 		You can set reminder options by visiting the class scheduled on your calendar.
 	</p>	
+
+	<%= link_to "My Calendar", "student_calendar", class: "btn btn-primary" %>
 </div>

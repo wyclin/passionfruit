@@ -6,8 +6,6 @@ class LandingPageController < ApplicationController
   end
 
   def main
-  	@message = Message.new
-  	
   end
 
   def thankyou

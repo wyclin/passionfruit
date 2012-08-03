@@ -1,31 +1,28 @@
   
     <div class="box box-teacher">
+
       <div class="row">
         <div class="span2 box-profile-img">
           <%= image_tag "profile/john_profile.jpg", class:"img profile-img" %>         
         </div>
         <div class="span10">
-          <h2>John Smith's Calendar</h2>
+          <h2>John Smith's Calendar</h2>                  
+          <button class="btn btn-success" style="width:150px">Private Class</button><br />
+          <button class="btn btn-warning" style="width:150px">Shared Class</button><br />
+          <button class="btn btn-danger" style="width:150px">Booked</button><br />
         </div>
       </div>
 
     <br />
+    <hr />
 
     <div id="johns_calendar">
       <div class="row" align="center">
-        <div class="span4">
-          <button class="btn btn-success">Private Class</button>
-        </div>
-        <div class="span4">
-          <button class="btn btn-warning">Shared Class</button>
-        </div>
-        <div class="span4">
-          <button class="btn btn-danger">Booked</button>
-        </div>
+
       </div>
       
       <div class="row">
-        <%= render 'layouts/calendar' %>
+        <%= render 'layouts/calendar_teacher' %>
       </div>
     </div>
   </div>
